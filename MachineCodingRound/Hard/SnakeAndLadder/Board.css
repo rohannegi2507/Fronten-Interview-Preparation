@@ -1,0 +1,27 @@
+.ludoRow {
+    display: flex;
+}
+
+.ludoNumber {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    background: #00b9f5;
+    text-align: center;
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.activeBox {
+    background: #012b72;
+    color: white;
+}
+
+.ladderEnd {
+    color: white;
+    font-size: 9px;
+}

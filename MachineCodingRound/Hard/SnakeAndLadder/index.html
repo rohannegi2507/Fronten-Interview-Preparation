@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="Board.css" />
+    <link rel="stylesheet" type="text/css" href="Player.css" />
+    <link rel="stylesheet" type="text/css" href="Button.css" />
+    <meta name="device" content="mobile" />
+    <title>Snake And Ladder</title>
+</head>
+
+<body>
+    <h3>Snake And Ladder</h3>
+    <div style="display: flex;">
+        <div id="ludoBoard"></div>
+        <div class="boardPlayer">
+            <div style="display: flex;align-items: center;">
+                <div>Current Position : </div>
+                <div id="player"></div>
+            </div>
+            <button id="dice" class="btn success">Roll</button>
+            <div id="numberOnDice">Number on dice: </div>
+        </div>
+    </div>
+    <script src="./SnakeAndLadder.js"></script>
+    <script src="./RenderBoard.js"></script>
+    <script src="./RollDice.js"></script>
+    <script src="./Player.js"></script>
+    <script src="./InitalizeGame.js"></script>
+</body>
+
+</html>

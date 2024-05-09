@@ -1,0 +1,16 @@
+.player {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    width: 10px;
+    margin-left: 10px;
+}
+
+.boardPlayer {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+    margin: 20px;
+}

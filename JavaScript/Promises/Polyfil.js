@@ -8,6 +8,12 @@ const promiseA = new Promise((res, rej)=>{
 const promiseB = new Promise((res, rej)=>{
     setTimeout(()=>{
         res("promise b")
+    },300)
+})
+
+const promiseC = new Promise((res, rej)=>{
+    setTimeout(()=>{
+        res("promise c")
     },100)
 })
 
@@ -15,7 +21,7 @@ const promiseB = new Promise((res, rej)=>{
 
 function polyfill_all(arr){
     return new Promise((resolve, rej)=>{
-        let res = {}
+      let res = {}
       arr.forEach((item, index)=>{
          item.then((data)=>{
               console.log("each-all", data, index)
@@ -24,7 +30,7 @@ function polyfill_all(arr){
                   resolve(Object.values(res))
               }
          }).catch((err)=>{
-             resolve(err)
+             rej(err)
          })
       })
     })
@@ -52,7 +58,7 @@ function polyfill_race(arr){
 
 
 
-polyfill_all([promiseA, promiseB]).then((data)=>{
+polyfill_all([promiseA, promiseB, promiseC]).then((data)=>{
     console.log("final-all",data)
 })
 

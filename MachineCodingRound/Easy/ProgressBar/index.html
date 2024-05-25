@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress Bar Demo</title>
+<style>
+    .progress-bar {
+        width: 300px;
+        height: 20px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    
+    .progress-bar-fill {
+        height: 100%;
+        background-color: #4caf50;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    input[type="number"] {
+        width: 50px;
+    }
+</style>
+</head>
+<body>
+    <input type="number" id="progressInput" min="0" max="100" value="0" oninput="updateProgressBar()">
+    <div class="progress-bar" id="progressBar">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+    </div>
+
+    <script>
+        function updateProgressBar() {
+            var input = document.getElementById("progressInput");
+            var progressBarFill = document.getElementById("progressBarFill");
+
+            // Get the value from the input
+            var value = input.value;
+
+            // Set the width of the progress bar fill
+            progressBarFill.style.width = value + "%";
+        }
+    </script>
+</body>
+</html>
